@@ -1,0 +1,6 @@
+nltk
+#tensorflow
+torch
+transformers
+#fastapi
+#uvicorn
