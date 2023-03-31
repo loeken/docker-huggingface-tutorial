@@ -17,6 +17,8 @@ model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
+print(device)
+
 # Tokenize sentences
 sentences = nltk.tokenize.sent_tokenize(file_content)
 
