@@ -1,0 +1,24 @@
+version: "3.3"
+services:
+  pipeline:
+    build:
+      context: .
+      args:
+        # specify which cuda version your card supports: https://developer.nvidia.com/cuda-gpus
+        TORCH_CUDA_ARCH_LIST: ${TORCH_CUDA_ARCH_LIST}
+    env_file: .env
+    stdin_open: true
+    tty: true
+    ports:
+      - 8000:8000
+    volumes:
+      - type: bind
+        source: ./transformers
+        target: /root/.cache/huggingface/transformers/
+#    deploy:
+#      resources:
+#        reservations:
+#          devices:
+#            - driver: nvidia
+#              device_ids: ['0']
+#              capabilities: [gpu]
