@@ -1,5 +1,5 @@
 # GPTQ-for-LLaMa and Text Generation WebUI Dockerfile
-FROM nvidia/cuda:11.7.0-devel-ubuntu22.04 as builder
+FROM nvidia/cuda:11.8.0-devel-ubuntu22.04 as builder
 
 WORKDIR /app
 
