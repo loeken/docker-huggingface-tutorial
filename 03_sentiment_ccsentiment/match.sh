@@ -17,6 +17,7 @@ while read -r line; do
   ccsentiment=$(echo "$line" | jq -r '.ccsentiment')
 
   # Compare the values and update counters
+  echo "$label" = "$ccsentiment" $matched_lines/$total_lines
   if [ "$label" = "$ccsentiment" ]; then
     matched_lines=$((matched_lines + 1))
   fi

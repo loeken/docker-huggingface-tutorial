@@ -1,0 +1,6 @@
+langchain
+gpt-index
+llama-index
+transformers
+sentence_transformers
+gradio

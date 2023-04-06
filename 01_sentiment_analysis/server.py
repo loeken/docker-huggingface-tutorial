@@ -6,7 +6,7 @@ app = FastAPI()
 # Load sentiment analysis model
 sentiment_classifier = pipeline(
     "sentiment-analysis",
-    model="distilbert-base-uncased-finetuned-sst-2-english"
+    model="curiousily/alpaca-bitcoin-tweets-sentiment"
 )
 @app.post("/sentiment")
 async def analyze_sentiment(request: Request):
