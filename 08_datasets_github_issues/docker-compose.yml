@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  pipeline:
+    build:
+      context: .
+    env_file: .env
+    stdin_open: true
+    tty: true
+    ports:
+      - 8000:8000
+    volumes:
+      - type: bind
+        source: ./cache
+        target: /root/.cache/
